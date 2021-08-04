@@ -28,7 +28,7 @@ partition(arr, p, r) {
 func Partition(arr []int, start, end int) int {
 	pivot := arr[end]
 	i := start
-	for j := start; j < end-1; j++ {
+	for j := start; j < end; j++ {
 		if arr[j] < pivot {
 			if i != j {
 				arr[i], arr[j] = arr[j], arr[i]
@@ -52,7 +52,8 @@ func QuickSort(arr []int, start, end int) {
 }
 
 func main() {
-	arr := []int{3, 2, 5, 9, 4}
+	//arr := []int{3, 2, 5, 9, 4}
+	arr := []int{5, 2, 3, 1, 4}
 	QuickSort(arr, 0, len(arr)-1)
 	fmt.Println(arr)
 }
